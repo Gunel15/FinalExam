@@ -1,0 +1,32 @@
+﻿@using FinalExam.ViewModels.Positions
+@model List<PositionGetVM>
+@{
+    int order = 1;
+}
+<a asp-action="Create" class="btn btn-primary">Create</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@(order++)</th>
+                <td>@item.Name</td>
+                <td>
+                    <a asp-action="Update" class="btn btn-primary" asp-route-id="@item.Id">Update</a>
+                    <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.Id">Delete</a>
+                </td>
+               
+            </tr>
+        }
+       
+       
+    </tbody>
+</table>
+

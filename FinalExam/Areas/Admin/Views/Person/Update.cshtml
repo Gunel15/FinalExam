@@ -1,0 +1,23 @@
+﻿@using FinalExam.ViewModels.Persons
+@model PersonUpdateVM
+<form method="post" enctype="multipart/form-data">
+    <a asp-action="Index" class="btn btn-primary">GoToList</a>
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageFile">Image</label>
+        <input asp-for="ImageFile" class="form-control">
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PositionId">Position</label>
+        <select asp-for="PositionId" class="form-select" asp-items='new SelectList(ViewBag.Position,"Id","Name")'></select>
+        <span asp-validation-for="PositionId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

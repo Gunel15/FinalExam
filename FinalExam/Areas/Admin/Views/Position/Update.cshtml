@@ -1,0 +1,13 @@
+﻿@using FinalExam.ViewModels.Positions
+@model PositionUpdateVM
+<form method="post">
+    <a asp-action="Index" class="btn btn-primary">GoToList</a>
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control"  placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
