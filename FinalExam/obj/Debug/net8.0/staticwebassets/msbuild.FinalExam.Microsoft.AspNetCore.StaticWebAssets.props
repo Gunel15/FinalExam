@@ -33678,6 +33678,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\persons\035afb0e-57ef-49cc-9383-64b668b42e73hand-drawn-web-developers_23-2148819604.avif'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\persons\2e960710-2469-43f7-89ee-eba69be2fc0dAzure Developer.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>FinalExam</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/FinalExam</BasePath>
+      <RelativePath>imgs/persons/2e960710-2469-43f7-89ee-eba69be2fc0dAzure Developer.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5u4jna384p</Fingerprint>
+      <Integrity>w1HjRmLPql/CW4W2F/nDb2WNzjEik1Nx4cGVDDETfVs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\persons\2e960710-2469-43f7-89ee-eba69be2fc0dAzure Developer.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\persons\56777420-5008-4ce9-8bcf-b0c36ecba1cbAzure Developer.png'))">
       <SourceType>Package</SourceType>
       <SourceId>FinalExam</SourceId>

@@ -1,4 +1,6 @@
 using FinalExam.DataAccessLayer;
+using FinalExam.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinalExam
@@ -12,7 +14,13 @@ namespace FinalExam
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"));
             });
-          
+            builder.Services.AddIdentity<User, IdentityRole>(opt =>
+            {
+                opt.Password.RequiredLength = 6;
+                opt.Password.RequireUppercase = true;
+               
+            }).AddEntityFrameworkStores<EateryCafeDbContext>().AddDefaultTokenProviders();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

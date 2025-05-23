@@ -1,9 +1,10 @@
 ﻿using FinalExam.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinalExam.DataAccessLayer
 {
-    public class EateryCafeDbContext:DbContext
+    public class EateryCafeDbContext:IdentityDbContext<User>
     {
         public EateryCafeDbContext(DbContextOptions opt):base(opt)
         {

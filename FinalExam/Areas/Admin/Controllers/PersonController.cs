@@ -2,12 +2,14 @@
 using FinalExam.Models;
 using FinalExam.ViewModels.Persons;
 using FinalExam.ViewModels.Positions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinalExam.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class PersonController(EateryCafeDbContext _context) : Controller
     {
         public async Task<IActionResult> Index()
