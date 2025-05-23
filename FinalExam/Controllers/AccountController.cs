@@ -72,6 +72,12 @@ namespace FinalExam.Controllers
             return RedirectToAction("Index","Home");
         }
 
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
+        }
+
         public async Task<IActionResult> CreateAdmin()
         {
             User admin = new()

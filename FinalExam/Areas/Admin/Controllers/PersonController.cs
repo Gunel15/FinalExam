@@ -110,8 +110,13 @@ namespace FinalExam.Areas.Admin.Controllers
         {
             if (!id.HasValue || id.Value < 1)
                 return BadRequest();
+            var person = await _context.Persons.FindAsync(id);
             var result=await _context.Persons.Where(x=>x.Id==id).ExecuteDeleteAsync();
             if(result==0) return NotFound();
+            if (System.IO.File.Exists(Path.Combine("wwwroot", "imgs", "persons",person.ImageUrl)))
+            {
+                System.IO.File.Delete(Path.Combine("wwwroot", "imgs", "persons", person.ImageUrl));
+            }
             return RedirectToAction(nameof(Index));
         }
     }
